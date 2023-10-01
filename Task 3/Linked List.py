@@ -124,7 +124,10 @@ class Linked_list:
 
     def __str__(self):
         return "[" + ", ".join(str(self[i]) for i in range(len(self))) + "]"
-    
+
+    ###
+    # №4
+    ###
     def __add__(self, other):
         if not isinstance(other, Linked_list):
             return None #здесь должно быть исключение

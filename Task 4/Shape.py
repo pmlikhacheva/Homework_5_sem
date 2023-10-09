@@ -45,24 +45,24 @@ class Circle(Shape):
 class Triangle(Shape):
     def __init__(self, point1, point2, point3):
         super().__init__("Треугольник")
-        self._point1 = point1
-        self._point2 = point2
-        self._point3 = point3
+        self.point1 = point1
+        self.point2 = point2
+        self.point3 = point3
 
     def area(self):
-        abs(self._point1.get_x()*(self._point2.get_y() - self._point3.get_y()) + self._point2.get_x()*(self._point3.get_y() - self._point1.get_y()) + self._point3.get_x()*(self._point1.get_y() - self._point2.get_y()) ) / 2.0
-        return abs(self._point1.get_x()*(self._point2.get_y() - self._point3.get_y()) 
-                   + self._point2.get_x()*(self._point3.get_y() - self._point1.get_y())
-                   + self._point3.get_x()*(self._point1.get_y() - self._point2.get_y())) / 2.0
+        abs(self.point1.get_x()*(self.point2.get_y() - self.point3.get_y()) + self.point2.get_x()*(self.point3.get_y() - self.point1.get_y()) + self.point3.get_x()*(self.point1.get_y() - self.point2.get_y()) ) / 2.0
+        return abs(self.point1.get_x()*(self.point2.get_y() - self.point3.get_y()) 
+                   + self.point2.get_x()*(self.point3.get_y() - self.point1.get_y())
+                   + self.point3.get_x()*(self.point1.get_y() - self.point2.get_y())) / 2.0
 
 
     def perimeter(self):
-        side1 = ((self._point2.get_x() - self._point1.get_x())**2 +
-                 (self._point2.get_y() - self._point1.get_y())**2)**0.5
-        side2 = ((self._point3.get_x() - self._point2.get_x())**2 +
-                 (self._point3.get_y() - self._point2.get_y())**2)**0.5
-        side3 = ((self._point1.get_x() - self._point3.get_x())**2 +
-                 (self._point1.get_y() - self._point3.get_y())**2)**0.5
+        side1 = ((self.point2.get_x() - self.point1.get_x())**2 +
+                 (self.point2.get_y() - self.point1.get_y())**2)**0.5
+        side2 = ((self.point3.get_x() - self.point2.get_x())**2 +
+                 (self.point3.get_y() - self.point2.get_y())**2)**0.5
+        side3 = ((self.point1.get_x() - self.point3.get_x())**2 +
+                 (self.point1.get_y() - self.point3.get_y())**2)**0.5
         return side1 + side2 + side3
 
 
@@ -96,27 +96,27 @@ class Square(Rectangle):
 class Rhombus(Shape):
     def __init__(self, point1, point2, point3, point4):
         super().__init__("Ромб")
-        self._point1 = point1
-        self._point2 = point2
-        self._point3 = point3
-        self._point4 = point4
+        self.point1 = point1
+        self.point2 = point2
+        self.point3 = point3
+        self.point4 = point4
 
     def area(self):
-        diagonal1 = ((self._point2.get_x() - self._point1.get_x())**2 +
-                     (self._point2.get_y() - self._point1.get_y())**2)**0.5
-        diagonal2 = ((self._point4.get_x() - self._point3.get_x())**2 +
-                     (self._point4.get_y() - self._point3.get_y())**2)**0.5
+        diagonal1 = ((self.point2.get_x() - self.point1.get_x())**2 +
+                     (self.point2.get_y() - self.point1.get_y())**2)**0.5
+        diagonal2 = ((self.point4.get_x() - self.point3.get_x())**2 +
+                     (self.point4.get_y() - self.point3.get_y())**2)**0.5
         return (diagonal1 * diagonal2) / 2
 
     def perimeter(self):
-        side1 = ((self._point2.get_x() - self._point1.get_x())**2 +
-                 (self._point2.get_y() - self._point1.get_y())**2)**0.5
-        side2 = ((self._point3.get_x() - self._point2.get_x())**2 +
-                 (self._point3.get_y() - self._point2.get_y())**2)**0.5
-        side3 = ((self._point4.get_x() - self._point3.get_x())**2 +
-                 (self._point4.get_y() - self._point3.get_y())**2)**0.5
-        side4 = ((self._point1.get_x() - self._point4.get_x())**2 +
-                 (self._point1.get_y() - self._point4.get_y())**2)**0.5
+        side1 = ((self.point2.get_x() - self.point1.get_x())**2 +
+                 (self.point2.get_y() - self.point1.get_y())**2)**0.5
+        side2 = ((self.point3.get_x() - self.point2.get_x())**2 +
+                 (self.point3.get_y() - self.point2.get_y())**2)**0.5
+        side3 = ((self.point4.get_x() - self.point3.get_x())**2 +
+                 (self.point4.get_y() - self.point3.get_y())**2)**0.5
+        side4 = ((self.point1.get_x() - self.point4.get_x())**2 +
+                 (self.point1.get_y() - self.point4.get_y())**2)**0.5
         return side1 + side2 + side3 + side4
 
 point1 = Point(0, 0)
